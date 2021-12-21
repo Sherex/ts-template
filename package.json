@@ -1,16 +1,20 @@
 {
   "name": "ts-template",
+  "type": "module",
   "private": true,
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "files": [
     "dist/"
   ],
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",
-    "dev": "ts-node src/",
+    "dev": "node --loader ts-node/esm ./src/index.ts",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
     "test": "npm run lint",
