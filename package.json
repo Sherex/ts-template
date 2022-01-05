@@ -17,6 +17,7 @@
     "dev": "node --loader ts-node/esm ./src/index.ts",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
+    "lint:commit": "commitlint --edit --config commitlint.config.cjs",
     "test": "npm run lint",
     "prepare": "echo -e \"\\033[0;32m For automatic local commit linting run: 'npm run husky:install' \\033[0m\"",
     "husky:install": "husky install"
