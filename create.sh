@@ -42,3 +42,4 @@ echo "Reinitializing local git repository... "
 cd $PROJECT_NAME
 rm -rf .git
 git init -q
+rm create.sh
